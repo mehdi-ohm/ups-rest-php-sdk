@@ -45,19 +45,11 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['Day']);
             }
             if (\array_key_exists('OpenHours', $data)) {
-                $values = [];
-                foreach ($data['OpenHours'] as $value) {
-                    $values[] = $value;
-                }
-                $object->setOpenHours($values);
+                $object->setOpenHours($data['OpenHours']);
                 unset($data['OpenHours']);
             }
             if (\array_key_exists('CloseHours', $data)) {
-                $values_1 = [];
-                foreach ($data['CloseHours'] as $value_1) {
-                    $values_1[] = $value_1;
-                }
-                $object->setCloseHours($values_1);
+                $object->setCloseHours($data['CloseHours']);
                 unset($data['CloseHours']);
             }
             if (\array_key_exists('LatestDropOffHours', $data)) {
@@ -76,9 +68,9 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setOpen24HoursIndicator($data['Open24HoursIndicator']);
                 unset($data['Open24HoursIndicator']);
             }
-            foreach ($data as $key => $value_2) {
+            foreach ($data as $key => $value) {
                 if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_2;
+                    $object[$key] = $value;
                 }
             }
             return $object;
@@ -88,18 +80,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             $data = [];
             $data['Day'] = $object->getDay();
             if ($object->isInitialized('openHours') && null !== $object->getOpenHours()) {
-                $values = [];
-                foreach ($object->getOpenHours() as $value) {
-                    $values[] = $value;
-                }
-                $data['OpenHours'] = $values;
+                $data['OpenHours'] = $object->getOpenHours();
             }
             if ($object->isInitialized('closeHours') && null !== $object->getCloseHours()) {
-                $values_1 = [];
-                foreach ($object->getCloseHours() as $value_1) {
-                    $values_1[] = $value_1;
-                }
-                $data['CloseHours'] = $values_1;
+                $data['CloseHours'] = $object->getCloseHours();
             }
             if ($object->isInitialized('latestDropOffHours') && null !== $object->getLatestDropOffHours()) {
                 $data['LatestDropOffHours'] = $object->getLatestDropOffHours();
@@ -113,9 +97,9 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if ($object->isInitialized('open24HoursIndicator') && null !== $object->getOpen24HoursIndicator()) {
                 $data['Open24HoursIndicator'] = $object->getOpen24HoursIndicator();
             }
-            foreach ($object as $key => $value_2) {
+            foreach ($object as $key => $value) {
                 if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_2;
+                    $data[$key] = $value;
                 }
             }
             return $data;
@@ -160,19 +144,11 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['Day']);
             }
             if (\array_key_exists('OpenHours', $data)) {
-                $values = [];
-                foreach ($data['OpenHours'] as $value) {
-                    $values[] = $value;
-                }
-                $object->setOpenHours($values);
+                $object->setOpenHours($data['OpenHours']);
                 unset($data['OpenHours']);
             }
             if (\array_key_exists('CloseHours', $data)) {
-                $values_1 = [];
-                foreach ($data['CloseHours'] as $value_1) {
-                    $values_1[] = $value_1;
-                }
-                $object->setCloseHours($values_1);
+                $object->setCloseHours($data['CloseHours']);
                 unset($data['CloseHours']);
             }
             if (\array_key_exists('LatestDropOffHours', $data)) {
@@ -191,9 +167,9 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setOpen24HoursIndicator($data['Open24HoursIndicator']);
                 unset($data['Open24HoursIndicator']);
             }
-            foreach ($data as $key => $value_2) {
+            foreach ($data as $key => $value) {
                 if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_2;
+                    $object[$key] = $value;
                 }
             }
             return $object;
@@ -206,18 +182,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             $data = [];
             $data['Day'] = $object->getDay();
             if ($object->isInitialized('openHours') && null !== $object->getOpenHours()) {
-                $values = [];
-                foreach ($object->getOpenHours() as $value) {
-                    $values[] = $value;
-                }
-                $data['OpenHours'] = $values;
+                $data['OpenHours'] = $object->getOpenHours();
             }
             if ($object->isInitialized('closeHours') && null !== $object->getCloseHours()) {
-                $values_1 = [];
-                foreach ($object->getCloseHours() as $value_1) {
-                    $values_1[] = $value_1;
-                }
-                $data['CloseHours'] = $values_1;
+                $data['CloseHours'] = $object->getCloseHours();
             }
             if ($object->isInitialized('latestDropOffHours') && null !== $object->getLatestDropOffHours()) {
                 $data['LatestDropOffHours'] = $object->getLatestDropOffHours();
@@ -231,9 +199,9 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if ($object->isInitialized('open24HoursIndicator') && null !== $object->getOpen24HoursIndicator()) {
                 $data['Open24HoursIndicator'] = $object->getOpen24HoursIndicator();
             }
-            foreach ($object as $key => $value_2) {
+            foreach ($object as $key => $value) {
                 if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_2;
+                    $data[$key] = $value;
                 }
             }
             return $data;
